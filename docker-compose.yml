@@ -1,6 +1,7 @@
 elasticsearch:
    image: elasticsearch:2.2
    restart: always
+   log_file: "json-file"
    log_opt:
       max-size: "10m"
       max-file: "10"
@@ -12,6 +13,7 @@ elasticsearch:
 logstash:
    build: logstash
    restart: always
+   log_file: "json-file"
    log_opt:
       max-size: "10m"
       max-file: "10"
@@ -24,6 +26,7 @@ logstash:
 kibana:
    image: kibana:4.4
    restart: always
+   log_file: "json-file"
    log_opt:
       max-size: "10m"
       max-file: "10"
@@ -35,6 +38,7 @@ kibana:
 curator:
    build: curator
    restart: always
+   log_file: "json-file"
    log_opt:
       max-size: "10m"
       max-file: "10"
